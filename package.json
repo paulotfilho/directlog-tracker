@@ -1,0 +1,46 @@
+{
+  "name": "directlog-tracker",
+  "version": "0.1.0",
+  "description": "CLI for DirectLog package tracking",
+  "main": "./build/directlog.js",
+  "bin": {
+    "directlog": "build/directlog.js"
+  },
+  "scripts": {
+    "build": "babel src/ -d build/ --delete-dir-on-start",
+    "lint": "eslint --ext .js ."
+  },
+  "author": "Paulo Telles Filho",
+  "homepage": "https://github.com/paulotfilho/directlog-tracker",
+  "keywords": [
+    "directlog"
+  ],
+  "license": "MIT",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulotfilho/directlog-tracker/tree/master"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.47",
+    "cheerio": "^1.0.0-rc.2",
+    "cli-table2": "^0.2.0",
+    "commander": "^2.16.0",
+    "iconv": "^2.3.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.49",
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/plugin-transform-async-to-generator": "^7.0.0-beta.49",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.0.1",
+    "babel-preset-minify": "^0.4.2",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
