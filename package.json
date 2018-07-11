@@ -26,7 +26,6 @@
     "cheerio": "^1.0.0-rc.2",
     "cli-table2": "^0.2.0",
     "commander": "^2.16.0",
-    "iconv": "^2.3.0",
     "request": "^2.87.0",
     "request-promise": "^4.2.2"
   },
