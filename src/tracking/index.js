@@ -1,6 +1,5 @@
 import rp from 'request-promise';
 import cheerio from 'cheerio';
-import { toUTF8 } from '../helpers/string';
 
 export const trackRemessa = async (remessa) => {
   const options = {
