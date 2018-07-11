@@ -19,4 +19,4 @@ npm install directlog-tracker -g
 directlog 91750020965706
 ```
 
-![alt_text](https://i.imgur.com/ahiRgyD.png)
+![Tracking Results](https://i.imgur.com/ahiRgyD.png)
