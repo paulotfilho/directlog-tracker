@@ -18,8 +18,7 @@ export const trackRemessa = async (remessa) => {
   const objects = [];
   let lines = [];
   
-
-    $('b').each(function (i) {
+  $('b').each(function (i) {
     if (i > 5) {
       lines.push($(this).text());
 
