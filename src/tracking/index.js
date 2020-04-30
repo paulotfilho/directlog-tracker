@@ -9,6 +9,7 @@ export const trackRemessa = async (remessa) => {
     form: {
       tipo: 0,
       numtracking: remessa,
+      tknConsulta: await getToken()
     },
     transform: body => cheerio.load(body),
   };
@@ -16,8 +17,9 @@ export const trackRemessa = async (remessa) => {
   const $ = await rp(options);
   const objects = [];
   let lines = [];
+  
 
-  $('b').each(function (i) {
+    $('b').each(function (i) {
     if (i > 5) {
       lines.push($(this).text());
 
@@ -36,6 +38,22 @@ export const trackRemessa = async (remessa) => {
   });
 
   return objects;
+};
+
+const getToken = async () => {
+  const tokenRegex = /<input type="hidden" name="tknConsulta" id="tknConsulta1" value="(\w+)">/i
+
+  const options = {
+    method: 'GET',
+    encoding: 'latin1',
+    uri: 'https://www.directlog.com.br'
+  };
+
+  let page = await rp(options);  
+  let tokenSearch = page.match(tokenRegex);
+  if (tokenSearch) {
+    return tokenSearch[1];
+  } 
 };
 
 export default {
